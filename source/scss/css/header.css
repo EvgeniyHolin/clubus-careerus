@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  padding: 30px 0;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}/*# sourceMappingURL=header.css.map */

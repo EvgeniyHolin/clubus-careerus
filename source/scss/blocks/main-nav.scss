@@ -9,14 +9,12 @@
     pointer-events: all;
 
     &::before {
-      width: 100%;
-      height: 100%;
-      border-radius: 16px;
-      border-color: $color-default-black;
+      clip-path: circle(120% at 25% 100%);
     }
 
     #{$root}__list {
       opacity: 1;
+      transition: opacity $trans-default 0.5s;
     }
   }
 
@@ -25,8 +23,13 @@
     position: absolute;
     right: 0;
     top: 0;
-    border: 2px solid transparent;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $color-default-black;
+    border-radius: 16px;
     z-index: -1;
+    clip-path: circle(0% at 100% 0%);
+    transition: clip-path $trans-600;
   }
 
   &__list {
@@ -38,6 +41,7 @@
     padding: 52px 40px 46px;
     width: 260px;
     opacity: 0;
+    transition: opacity $trans-default;
   }
 
   &__link {
